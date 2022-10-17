@@ -14,6 +14,7 @@ const HomeLayout = () => {
     const [tweetsError, settweetsError] = useState(null)
     const [publishLoading, setpublishLoading] = useState(false)
     const { ...data } = useContext(AppContext)
+    
     const usuario = {
         id: data.data.auth.user_id,
         name: data.data.name,
@@ -41,7 +42,7 @@ const HomeLayout = () => {
                     user={usuario}
                     loading={publishLoading}
                     // error={} estado de error en la acción de post del tweet (debe mostrarse también si esta vacío el texto)
-                    // onPublish={ }
+                    // onPublish={ }  DESARROLLADOS EN TWEET-ITEM AMBOS.
                 />
                 <TweetsList
                     list={tweetsList}
